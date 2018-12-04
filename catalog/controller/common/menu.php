@@ -40,7 +40,11 @@ class ControllerCommonMenu extends Controller {
 				);
 			}
 		}
-
+        
+        $data['home'] = $this->url->link('common/home');
+        $data['contact'] = $this->url->link('information/contact');
+        $data['aboutus'] = $this->url->link('information/information&information_id=4');
+        
 		return $this->load->view('common/menu', $data);
 	}
 }

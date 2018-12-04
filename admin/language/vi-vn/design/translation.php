@@ -7,7 +7,7 @@ $_['text_success']     = 'Thành công: Bạn đã sửa đổi trình soạn th
 $_['text_list']        = 'Danh mục dịch';
 $_['text_edit']        = 'Chỉnh sửa dịch';
 $_['text_add']         = 'Thêm bản dịch';
-$_['text_default']     = 'Mặc địnht';
+$_['text_default']     = 'Mặc định';
 $_['text_store']       = 'Gian hàng';
 $_['text_language']    = 'Ngôn ngữ';
 
