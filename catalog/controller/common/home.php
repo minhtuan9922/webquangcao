@@ -10,7 +10,14 @@ class ControllerCommonHome extends Controller {
 		}
 
 		$data['column_left'] = $this->load->controller('common/column_left');
-		$data['column_right'] = $this->load->controller('common/column_right');
+		//$data['column_right'] = $this->load->controller('common/column_right');
+		$data['column_right'] = $this->load->controller('common/column_right1');
+		
+		$setting_info = $this->model_setting_module->getModule(27);
+		$data['slide'] = $this->load->controller('extension/module/slideshow', $setting_info);
+		$setting_info1 = $this->model_setting_module->getModule(29);
+		$data['slide1'] = $this->load->controller('extension/module/carousel', $setting_info1);
+		
 		$data['content_top'] = $this->load->controller('common/content_top');
 		$data['content_bottom'] = $this->load->controller('common/content_bottom');
 		$data['footer'] = $this->load->controller('common/footer');

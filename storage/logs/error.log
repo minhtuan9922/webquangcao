@@ -1,0 +1,9 @@
+2018-12-17 18:05:52 - PHP Notice:  Undefined index: banner_id in C:\xampp\htdocs\webquangcao\catalog\controller\extension\module\slideshow.php on line 15
+2018-12-17 18:08:05 - PHP Notice:  Undefined index: banner_id in C:\xampp\htdocs\webquangcao\catalog\controller\extension\module\carousel.php on line 15
+2018-12-17 18:08:54 - PHP Notice:  Undefined index: banner_id in C:\xampp\htdocs\webquangcao\catalog\controller\extension\module\slideshow.php on line 15
+2018-12-17 18:14:13 - PHP Notice:  Undefined index: banner_id in C:\xampp\htdocs\webquangcao\catalog\controller\extension\module\slideshow.php on line 15
+2018-12-17 18:14:13 - PHP Notice:  Array to string conversion in C:\xampp\htdocs\webquangcao\catalog\controller\common\content_top.php on line 49
+2018-12-17 18:14:13 - PHP Notice:  Array to string conversion in C:\xampp\htdocs\webquangcao\catalog\controller\common\content_top.php on line 49
+2018-12-17 18:14:13 - PHP Notice:  Array to string conversion in C:\xampp\htdocs\webquangcao\catalog\controller\common\content_top.php on line 49
+2018-12-17 18:14:46 - PHP Notice:  Undefined index: banner_id in C:\xampp\htdocs\webquangcao\catalog\controller\extension\module\slideshow.php on line 15
+2018-12-17 18:16:17 - PHP Notice:  Undefined index: banner_id in C:\xampp\htdocs\webquangcao\catalog\controller\extension\module\slideshow.php on line 15

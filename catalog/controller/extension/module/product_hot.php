@@ -1,5 +1,5 @@
 <?php
-class ControllerExtensionModuleFeatured extends Controller {
+class ControllerExtensionModuleProductHot extends Controller {
 	public function index($setting) {
 		$this->load->language('extension/module/featured');
 
@@ -11,10 +11,6 @@ class ControllerExtensionModuleFeatured extends Controller {
 
 		if (!$setting['limit']) {
 			$setting['limit'] = 4;
-		}
-		if(isset($setting['name']))
-		{
-			$data['title'] = $setting['name'];
 		}
 
 		if (!empty($setting['product'])) {
