@@ -3,9 +3,82 @@
 	{% for module in modules %}
     {{ module }}
     {% endfor %} 
-	<div class="bg-left product-hot">
-		<h4>Sản phẩm hot</h4>
-		
+	<div class="bg-left news">
+		<h3>Tin tức</h3>
+		<div class="bm">
+			{% if posts %}
+				<div class="bm-posts">
+					<div class="bm-grid bm-grid">
+						<div class="row">
+							{% for post in posts %}
+								{% if post.row %}
+									</div><div class="row">
+								{% endif %}
+								<div class="col-sm-{{post.col}}">
+									<div class="new-item-body">
+										<article class="post-layout post-grid">
+											<div class="post-thumb">
+												<div class="image">
+													<a href="{{post.post.href}}">
+														<img src="{{post.post.thumb}}" alt="{{post.post.image_alt}}" title="{{post.post.image_title}}" class="img-responsive"/>
+													</a>
+												</div>
+												<div class="post-thumb-heading">
+													<h4 class="title"><a href="{{post.post.href}}">{{post.post.title}}</a></h4>
+													<div class="short-description">
+														{% if post.post.setting.post_thumb.author_display %}
+														<span class="author"><i class="fa fa-user"></i> {{post.post.author}}</span>
+														{% endif %}
+														<br>
+														{% if post.post.setting.post_thumb.date_display %}
+														<span class="date-published"><i class="fa fa-clock-o"></i> {{post.post.date_published}}</span>
+														{% endif %}
+													</div>
+												</div>
+											</div>
+										</article>
+									</div>
+								</div>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			{% endif %}
+
+			{% if not posts %}
+				<p class="bm-empty">{{text_empty}}</p>
+				<div class="buttons">
+					<div class="pull-right"><a href="{{continue}}" class="btn btn-primary">{{button_continue}}</a></div>
+				</div>
+			{% endif %}
+		</div>
+	</div>
+	<div class="contact-home">
+		<h3>Thông tin liên hệ</h3>
+		<div class="contact-item">
+			<a href="tel:0987654321">
+				<img src="image/catalog/phone-icon.png">
+				<span>0987654321</span>
+			</a>
+		</div>
+		<div class="contact-item">
+			<a href="https://zalo.me/0987654321">
+				<img src="image/catalog/zalo-icon.png">
+				<span>0987654321</span>
+			</a>
+		</div>
+		<div class="contact-item">
+			<a href="#">
+				<img src="image/catalog/facebook-icon.png">
+				<span>facebook</span>
+			</a>
+		</div>
+		<div class="contact-item">
+			<a href="#">
+				<img src="image/catalog/map-icon.png">
+				<span>Địa chỉ</span>
+			</a>
+		</div>
 	</div>
 </aside>
 {% endif %} 

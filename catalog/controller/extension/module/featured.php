@@ -70,7 +70,14 @@ class ControllerExtensionModuleFeatured extends Controller {
 		}
 
 		if ($data['products']) {
-			return $this->load->view('extension/module/featured', $data);
+			if($setting['name'] == 'Sản phẩm hot' || $setting['name'] == 'Sản phẩm nổi bật')
+			{
+				return $this->load->view('extension/module/featured1', $data);
+			}
+			else
+			{
+				return $this->load->view('extension/module/featured', $data);
+			}
 		}
 	}
 }

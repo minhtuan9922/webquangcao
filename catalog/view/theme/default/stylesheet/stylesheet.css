@@ -790,9 +790,90 @@ h2.price {
 .product-hot {
 	border: 1px solid #dddddd;
 	border-radius: 4px;
+	margin-bottom: 20px;
 }
-.product-hot h4 {
+.product-hot h3 {
 	color: #FFFFFF;
 	padding-left: 15px;
 	padding-right: 15px;
+}
+.product-item {
+	position: relative;
+}
+.product-name {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding-left: 15px;
+	padding-right: 15px;
+	background-color: rgba(0,0,0,0.50);
+	color: #FFFFFF;
+	width: 100%;
+}
+.product-name h4 a {
+	color: #FFFFFF;
+}
+.product-name:hover h4 a {
+	color: #FFD600;
+}
+.news {
+	border: 1px solid #DDDDDD;
+	border-radius: 4px;
+	padding: 0px 15px 15px;
+	margin-bottom: 20px;
+}
+.news h3 {
+	color: #FFFFFF;
+}
+.new-item-body {
+	padding-bottom: 20px;
+	padding-top: 20px;
+	border-bottom: 1px dashed #eaeaea;
+}
+.news .post-thumb {
+	display: flex;
+}
+.news .image {
+	width: 40%;
+}
+.news .post-thumb-heading {
+	width: 60%;
+	padding-left: 10px;
+}
+.news .title {
+	margin-top: 0;
+	margin-bottom: 5px;
+	color: #FFFFFF;
+}
+.news .title a {
+	color: #FFFFFF;
+}
+.news .short-description {
+	color: #000000;
+}
+.contact-home {
+	background-color: #3bb3c3;
+	border: 1px solid #DDDDDD;
+	border-radius: 4px;
+	margin-bottom: 20px;
+	padding: 0px 15px 15px;
+}
+.contact-home h3 {
+	color: #FFFFFF;
+}
+.contact-home .contact-item {
+	display: block;
+	margin-bottom: 10px;
+}
+.contact-home .contact-item a {
+	display: block;
+	
+}
+.contact-home .contact-item img {
+	width: 28px;
+	height: 28px;
+	margin-right: 10px;
+}
+.contact-home .contact-item span {
+	color: #FFFFFF;
 }

@@ -10,8 +10,8 @@ class ControllerCommonHome extends Controller {
 		}
 
 		$data['column_left'] = $this->load->controller('common/column_left');
-		//$data['column_right'] = $this->load->controller('common/column_right');
-		$data['column_right'] = $this->load->controller('common/column_right1');
+		$data['column_right'] = $this->load->controller('common/column_right');
+//		$data['column_right'] = $this->load->controller('common/column_right1');
 		
 		$setting_info = $this->model_setting_module->getModule(27);
 		$data['slide'] = $this->load->controller('extension/module/slideshow', $setting_info);

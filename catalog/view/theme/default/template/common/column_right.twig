@@ -1,7 +1,57 @@
 {% if modules %}
-<aside id="column-right" class="col-sm-3 hidden-xs">
-  {% for module in modules %}
-  {{ module }}
-  {% endfor %}
+<aside id="column-right" class="col-sm-3 hidden-xs"> 
+	{% for module in modules %}
+    {{ module }}
+    {% endfor %} 
+	<div class="bg-left news">
+		<h3>Bản tin công ty</h3>
+		<div class="bm">
+			{% if posts %}
+				<div class="bm-posts">
+					<div class="bm-grid bm-grid">
+						<div class="row">
+							{% for post in posts %}
+								{% if post.row %}
+									</div><div class="row">
+								{% endif %}
+								<div class="col-sm-{{post.col}}">
+									<div class="new-item-body">
+										<article class="post-layout post-grid">
+											<div class="post-thumb">
+												<div class="image">
+													<a href="{{post.post.href}}">
+														<img src="{{post.post.thumb}}" alt="{{post.post.image_alt}}" title="{{post.post.image_title}}" class="img-responsive"/>
+													</a>
+												</div>
+												<div class="post-thumb-heading">
+													<h4 class="title"><a href="{{post.post.href}}">{{post.post.title}}</a></h4>
+													<div class="short-description">
+														{% if post.post.setting.post_thumb.author_display %}
+														<span class="author"><i class="fa fa-user"></i> {{post.post.author}}</span>
+														{% endif %}
+														<br>
+														{% if post.post.setting.post_thumb.date_display %}
+														<span class="date-published"><i class="fa fa-clock-o"></i> {{post.post.date_published}}</span>
+														{% endif %}
+													</div>
+												</div>
+											</div>
+										</article>
+									</div>
+								</div>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			{% endif %}
+
+			{% if not posts %}
+				<p class="bm-empty">{{text_empty}}</p>
+				<div class="buttons">
+					<div class="pull-right"><a href="{{continue}}" class="btn btn-primary">{{button_continue}}</a></div>
+				</div>
+			{% endif %}
+		</div>
+	</div>
 </aside>
-{% endif %}
+{% endif %} 
