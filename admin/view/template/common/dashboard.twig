@@ -1,36 +1,57 @@
 {{ header }}{{ column_left }}
 <div id="content">
-  <div class="page-header">
-    <div class="container-fluid">
-      <div class="pull-right">
-        <button type="button" id="button-setting" title="{{ button_setting }}" data-loading-text="{{ text_loading }}" class="btn btn-info"><i class="fa fa-cog"></i></button>
-      </div>
-      <h1>{{ heading_title }}</h1>
-      <ul class="breadcrumb">
-        {% for breadcrumb in breadcrumbs %}
-        <li><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
-        {% endfor %}
-      </ul>
+    <div class="page-header">
+        <div class="container-fluid">
+            <div class="pull-right">
+                <button type="button" id="button-setting" title="{{ button_setting }}" data-loading-text="{{ text_loading }}" class="btn btn-info"><i class="fa fa-cog"></i></button>
+            </div>
+            <h1>{{ heading_title }}</h1>
+            <ul class="breadcrumb">
+                {% for breadcrumb in breadcrumbs %}
+                <li><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
-  </div>
-  <div class="container-fluid">{% if error_install %}
-    <div class="alert alert-danger alert-dismissible">
-      <button type="button" class="close pull-right" data-dismiss="alert">&times;</button>
-      <i class="fa fa-exclamation-circle"></i> {{ error_install }}</div>
-    {% endif %}
-    {% for row in rows %}
-    <div class="row">{% for dashboard_1 in row %}
-      {% set class = 'col-lg-%s %s'|format(dashboard_1.width, 'col-md-3 col-sm-6') %}
-      {% for dashboard_2 in row %}
-      {% if dashboard_2.width > 3 %}
-      {% set class = 'col-lg-%s %s'|format(dashboard_1.width, 'col-md-12 col-sm-12') %}
-      {% endif %}
-      {% endfor %}
-      <div class="{{ class }}">{{ dashboard_1.output }}</div>
-      {% endfor %}</div>
-    {% endfor %}</div>
-    {{ security }}
-  <script type="text/javascript"><!--
+	<div class="container-fluid">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="pull-right"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-calendar"></i> <i class="caret"></i></a>
+                    <ul id="range" class="dropdown-menu dropdown-menu-right">
+                        <li><a href="day">Ngày</a></li>
+                        <li><a href="week">Tuần</a></li>
+                        <li class="active"><a href="month">Tháng</a></li>
+                        <li><a href="year">Năm</a></li>
+                    </ul>
+                </div>
+                <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i> Thống kê lượt truy cập</h3>
+            </div>
+            <div class="panel-body"> 
+				<div id="chart-view" style="width: 100%; height: 260px;"></div>
+			</div>
+        </div>
+    </div>
+    <div class="container-fluid">{% if error_install %}
+        <div class="alert alert-danger alert-dismissible">
+            <button type="button" class="close pull-right" data-dismiss="alert">&times;</button>
+            <i class="fa fa-exclamation-circle"></i> {{ error_install }}
+		</div>
+        {% endif %}
+        {% for row in rows %}
+        <div class="row">{% for dashboard_1 in row %}
+            {% set class = 'col-lg-%s %s'|format(dashboard_1.width, 'col-md-3 col-sm-6') %}
+            {% for dashboard_2 in row %}
+            {% if dashboard_2.width > 3 %}
+            {% set class = 'col-lg-%s %s'|format(dashboard_1.width, 'col-md-12 col-sm-12') %}
+            {% endif %}
+            {% endfor %}
+            <div class="{{ class }}">{{ dashboard_1.output }}</div>
+            {% endfor %}
+		</div>
+        {% endfor %}
+	</div>
+    {{ security }} 
+    <script type="text/javascript"><!--
 $('#button-setting').on('click', function() {
 	$.ajax({
 		url: 'index.php?route=common/developer&user_token={{ user_token }}',
@@ -53,6 +74,73 @@ $('#button-setting').on('click', function() {
 		}
 	});	
 });	
+//--></script> 
+<script type="text/javascript" src="view/javascript/jquery/flot/jquery.flot.js"></script> 
+<script type="text/javascript" src="view/javascript/jquery/flot/jquery.flot.resize.min.js"></script>
+<script type="text/javascript"><!--
+$('#range a').on('click', function(e) {
+	e.preventDefault();
+	
+	$(this).parent().parent().find('li').removeClass('active');
+	
+	$(this).parent().addClass('active');
+	
+	$.ajax({
+		type: 'get',
+		url: 'index.php?route=extension/dashboard/chart/chart&user_token={{ user_token }}&range=' + $(this).attr('href'),
+		dataType: 'json',
+		success: function(json) {
+            if (typeof json['order'] == 'undefined') { return false; }
+			
+			var option = {	
+				shadowSize: 0,
+				colors: ['#9FD5F1', '#1065D2'],
+				bars: { 
+					show: true,
+					fill: true,
+					lineWidth: 1
+				},
+				grid: {
+					backgroundColor: '#FFFFFF',
+					hoverable: true
+				},
+				points: {
+					show: false
+				},
+				xaxis: {
+					show: true,
+            		ticks: json['xaxis']
+				}
+			}
+			
+			$.plot('#chart-view', [json['order'], json['customer']], option);	
+					
+			$('#chart-view').bind('plothover', function(event, pos, item) {
+				$('.tooltip').remove();
+			  
+				if (item) {
+					$('<div id="tooltip" class="tooltip top in"><div class="tooltip-arrow"></div><div class="tooltip-inner">' + item.datapoint[1].toFixed(2) + '</div></div>').prependTo('body');
+					
+					$('#tooltip').css({
+						position: 'absolute',
+						left: item.pageX - ($('#tooltip').outerWidth() / 2),
+						top: item.pageY - $('#tooltip').outerHeight(),
+						pointer: 'cusror'
+					}).fadeIn('slow');	
+					
+					$('#chart-view').css('cursor', 'pointer');		
+			  	} else {
+					$('#chart-view').css('cursor', 'auto');
+				}
+			});
+		},
+        error: function(xhr, ajaxOptions, thrownError) {
+           alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+        }
+	});
+});
+
+$('#range .active a').trigger('click');
 //--></script> 
 </div>
 {{ footer }}
