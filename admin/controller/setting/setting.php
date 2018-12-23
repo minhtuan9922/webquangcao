@@ -289,6 +289,12 @@ class ControllerSettingSetting extends Controller {
 			$data['config_comment'] = $this->config->get('config_comment');
 		}
 
+		if (isset($this->request->post['config_map'])) {
+			$data['config_map'] = $this->request->post['config_map'];
+		} else {
+			$data['config_map'] = $this->config->get('config_map');
+		}
+
 		$this->load->model('localisation/location');
 
 		$data['locations'] = $this->model_localisation_location->getLocations();

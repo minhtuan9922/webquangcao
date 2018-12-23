@@ -58,6 +58,12 @@ class ControllerCommonFooter extends Controller {
 
 		$data['scripts'] = $this->document->getScripts('footer');
 		
+		$data['telephone'] = $this->config->get('config_telephone');
+		$data['email'] = $this->config->get('config_email');
+		$data['address'] = $this->config->get('config_address');
+		$data['comment'] = $this->config->get('config_comment');
+		$data['map'] = $this->config->get('config_map');
+		
 		return $this->load->view('common/footer', $data);
 	}
 }

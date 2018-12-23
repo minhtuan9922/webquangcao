@@ -290,6 +290,10 @@ class ControllerCommonColumnLeft extends Controller {
 
         //$this->response->setOutput($this->model_extension_d_opencart_patch_load->view('d_blog_module/category', $data));
 
+		$data['telephone'] = $this->config->get('config_telephone');
+		$data['email'] = $this->config->get('config_email');
+		$data['address'] = $this->config->get('config_address');
+		
 		return $this->load->view('common/column_left', $data);
 	}
 }
