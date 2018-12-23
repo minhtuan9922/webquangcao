@@ -1,29 +1,29 @@
 <?php
 // Heading
-$_['heading_title']           = 'Blog Author Groups';
+$_['heading_title']           = 'Nhóm tác giả';
 
 // Text
-$_['text_success']            = 'Success: You have modified author groups!';
-$_['text_list']               = 'Author Group List';
-$_['text_add']                = 'Add Author Group';
-$_['text_edit']               = 'Edit Author Group';
-$_['text_default']            = 'Default';
-$_['text_blog_module']        = 'Blog module';
+$_['text_success']            = 'Thành công: Bạn đã sửa đổi nhóm tác giả!';
+$_['text_list']               = 'Danh sách nhóm tác giả';
+$_['text_add']                = 'Thêm nhóm tác giả';
+$_['text_edit']               = 'Chỉnh sửa nhóm tác giả';
+$_['text_default']            = 'Mặc định';
+$_['text_blog_module']        = 'Mô-đun tin tức';
 
 // Column
-$_['column_author_name']      = 'Author Group name';
-$_['column_action']           = 'Action';
+$_['column_author_name']      = 'Tên nhóm tác giả';
+$_['column_action']           = 'Hành động';
 
 // Entry
-$_['entry_author_name']       = 'Author Group name';
-$_['entry_description']       = 'Description';
-$_['entry_short_description'] = 'Short Description';
-$_['entry_name']              = 'Name';
-$_['entry_permission']        = 'Permission';
+$_['entry_author_name']       = 'Tên nhóm tác giả';
+$_['entry_description']       = 'Mô tả';
+$_['entry_short_description'] = 'Mô tả ngắn';
+$_['entry_name']              = 'Tên';
+$_['entry_permission']        = 'Quyền';
 
 // Help
-$_['help_post']               = '(Autocomplete)';
-$_['help_user_editing']       = '<h4>Edit an existing user or create a new one?</h4><p><b>Author</b> is just a User (<a href="%s">list of users</a>), that has been granted the right to write posts. You can create an Author in two ways:</p><p><b>1. Asign author rights to an existing user</b></p><p>In the input <b>username</b> above start typing the first letter of your existing system user, which have not yet been asigned author rights. Select the user from the dropdown and continue with the form. Click save</p><p><b>2. Create a new User with Author rights</b></p><p>Just type the in the form above a new Username that you want to create and continue with the form. Click save. </p>';
+$_['help_post']               = '(Tự động hoàn thành)';
+$_['help_user_editing']       = '<h4>Chỉnh sửa người dùng hiện tại hoặc tạo người dùng mới?</h4><p><b>Tác giả</b> chỉ là người dùng (<a href="%s">danh sách người dùng</a>), đã được cấp quyền viết bài. Bạn có thể tạo tác giả theo 2 cách:</p><p><b>1. Quyền tác giả cho người dùng hiện tại</b></p><p>Trong tên <b>người dùng</b> ở trên bắt đầu nhập chữ cái đầu tiên của người dùng hệ thống hiện tại của bạn, chưa được gán quyền tác giả. Chọn người dùng từ danh sách thả xuống và tiếp tục với biểu mẫu. Nhấn lưu</p><p><b>2. Tạo người dùng mới với quyền tác giả</b></p><p>Chỉ cần nhập vào biểu mẫu bên trên với tên người dùng mới mà bạn muốn tạo và tiếp tục với biểu mẫu. Nhấn lưu. </p>';
 // Error
-$_['error_permission']        = 'Warning: You do not have permission to modify authors!';
-$_['error_name']              = 'Name must be between 3 and 20 characters!';
+$_['error_permission']        = 'Cảnh báo: Bạn không có quyền sửa đổi tác giả!';
+$_['error_name']              = 'Tên phải có từ 2 đến 20 ký tự!';

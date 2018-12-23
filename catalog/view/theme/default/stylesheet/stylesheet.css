@@ -877,3 +877,40 @@ h2.price {
 .contact-home .contact-item span {
 	color: #FFFFFF;
 }
+footer h4 {
+	color: #FFFFFF;
+}
+footer .contact-item {
+	display: block;
+	margin-bottom: 10px;
+}
+footer .contact-item a {
+	display: block;
+	
+}
+footer .contact-item img {
+	width: 28px;
+	height: 28px;
+	margin-right: 10px;
+}
+footer .contact-item span {
+	color: #FFFFFF;
+}
+.title-product {
+	height: 40px;
+	width: 100%;
+	background-color: #029141;
+	border-top-right-radius: 40px;
+	display: block;
+	margin-bottom: 20px;
+}
+.title-product h3 {
+	margin: 0;
+	color: #FFFFFF;
+	display: inline-block;
+	line-height: 40px;
+	padding-left: 15px;
+	padding-right: 50px;
+	border-top-right-radius: 40px;
+	background-color: #ed1c24;
+}

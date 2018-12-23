@@ -6,37 +6,49 @@ class ControllerExtensionEventDBlogModule extends Controller {
 
         $d_blog_module = array();
         $this->load->model('extension/d_opencart_patch/url');
-        $d_blog_module[] = array(
-            'name'     => $this->language->get('text_blog_post'),
-            'href'     => $this->model_extension_d_opencart_patch_url->link('extension/d_blog_module/post'),
-            'children' => array()
-        );
-        $d_blog_module[] = array(
-            'name'     => $this->language->get('text_blog_category'),
-            'href'     => $this->model_extension_d_opencart_patch_url->link('extension/d_blog_module/category'),
-            'children' => array()
-        );
-        $d_blog_module[] = array(
-            'name'     => $this->language->get('text_blog_review'),
-            'href'     => $this->model_extension_d_opencart_patch_url->link('extension/d_blog_module/review'),
-            'children' => array()
-        );
-        $d_blog_module[] = array(
-            'name'     => $this->language->get('text_blog_author'),
-            'href'     => $this->model_extension_d_opencart_patch_url->link('extension/d_blog_module/author'),
-            'children' => array()
-        );
-        $d_blog_module[] = array(
-            'name'     => $this->language->get('text_blog_author_group'),
-            'href'     => $this->model_extension_d_opencart_patch_url->link('extension/d_blog_module/author_group'),
-            'children' => array()
-        );
+		if ($this->user->hasPermission('access', 'extension/d_blog_module/post')) {
+			$d_blog_module[] = array(
+				'name'     => $this->language->get('text_blog_post'),
+				'href'     => $this->model_extension_d_opencart_patch_url->link('extension/d_blog_module/post'),
+				'children' => array()
+			);
+		}
+        if ($this->user->hasPermission('access', 'extension/d_blog_module/category')) {
+			$d_blog_module[] = array(
+				'name'     => $this->language->get('text_blog_category'),
+				'href'     => $this->model_extension_d_opencart_patch_url->link('extension/d_blog_module/category'),
+				'children' => array()
+			);
+		}
+        if ($this->user->hasPermission('access', 'extension/d_blog_module/review')) {
+			$d_blog_module[] = array(
+				'name'     => $this->language->get('text_blog_review'),
+				'href'     => $this->model_extension_d_opencart_patch_url->link('extension/d_blog_module/review'),
+				'children' => array()
+			);
+		}
+        if ($this->user->hasPermission('access', 'extension/d_blog_module/author')) {
+			$d_blog_module[] = array(
+				'name'     => $this->language->get('text_blog_author'),
+				'href'     => $this->model_extension_d_opencart_patch_url->link('extension/d_blog_module/author'),
+				'children' => array()
+			);
+		}
+        if ($this->user->hasPermission('access', 'extension/d_blog_module/author_group')) {
+			$d_blog_module[] = array(
+				'name'     => $this->language->get('text_blog_author_group'),
+				'href'     => $this->model_extension_d_opencart_patch_url->link('extension/d_blog_module/author_group'),
+				'children' => array()
+			);
+		}
 
-        $d_blog_module[] = array(
-            'name'     => $this->language->get('text_blog_settings'),
-            'href'     => $this->model_extension_d_opencart_patch_url->link('extension/module/d_blog_module'),
-            'children' => array()
-        );
+        if ($this->user->hasPermission('access', 'extension/module/d_blog_module')) {
+			$d_blog_module[] = array(
+				'name'     => $this->language->get('text_blog_settings'),
+				'href'     => $this->model_extension_d_opencart_patch_url->link('extension/module/d_blog_module'),
+				'children' => array()
+			);
+		}
 
         $insert['menus'][] = array(
             'id'       => 'menu-blog',

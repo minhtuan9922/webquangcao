@@ -1,65 +1,65 @@
 <?php
 // Heading
-$_['heading_title']             = 'Blog Categories';
-$_['tab_setting']               = 'Settings';
+$_['heading_title']             = 'Danh mục tin tức';
+$_['tab_setting']               = 'Cài đặt';
 
 // Text
-$_['text_success']              = 'Success: You have modified categories!';
-$_['text_list']                 = 'Category List';
-$_['text_add']                  = 'Add Category';
-$_['text_edit']                 = 'Edit Category';
-$_['text_default']              = 'Default';
-$_['text_enabled']              = 'Enabled';
-$_['text_disabled']             = 'Disabled';
-$_['text_blog_module']          = 'Blog module';
-$_['text_width']                = 'Width';
-$_['text_height']               = 'Height';
+$_['text_success']              = 'Thành công: Bạn đã sửa đổi danh mục!';
+$_['text_list']                 = 'Danh sách danh mục';
+$_['text_add']                  = 'Thêm danh mục';
+$_['text_edit']                 = 'Chỉnh sửa danh mục';
+$_['text_default']              = 'Mặc định';
+$_['text_enabled']              = 'Đã bật';
+$_['text_disabled']             = 'Đã tắt';
+$_['text_blog_module']          = 'Mô-đun tin tức';
+$_['text_width']                = 'Chiều rộng';
+$_['text_height']               = 'Chiều cao';
 
 // Column
-$_['column_title']              = 'Category Title';
-$_['column_sort_order']         = 'Sort Order';
-$_['column_action']             = 'Action';
-$_['column_status']             = 'Status';
+$_['column_title']              = 'Tiêu đề danh mục';
+$_['column_sort_order']         = 'Thứ tự sắp xếp';
+$_['column_action']             = 'Hành động';
+$_['column_status']             = 'Trạng thái';
 
 // Entry
-$_['entry_title']               = 'Category Title';
-$_['entry_short_description']   = 'Short Description';
-$_['entry_description']         = 'Description';
-$_['entry_meta_title']          = 'Meta Tag Title';
-$_['entry_meta_keyword']        = 'Meta Tag Keywords';
-$_['entry_meta_description']    = 'Meta Tag Description';
-$_['entry_parent']              = 'Parent';
-$_['entry_filter']              = 'Filters';
-$_['entry_store']               = 'Stores';
-$_['entry_image']               = 'Image';
-$_['entry_top']                 = 'Top';
-$_['entry_column']              = 'Columns';
-$_['entry_sort_order']          = 'Sort Order';
-$_['entry_status']              = 'Status';
-$_['entry_layout']              = 'Layout Override';
+$_['entry_title']               = 'Tiêu đề danh mục';
+$_['entry_short_description']   = 'Mô tả ngắn';
+$_['entry_description']         = 'Mô tả';
+$_['entry_meta_title']          = 'Tiêu đề thẻ meta';
+$_['entry_meta_keyword']        = 'Từ khóa thẻ meta';
+$_['entry_meta_description']    = 'Mô tả thẻ meta';
+$_['entry_parent']              = 'Danh mục gốc';
+$_['entry_filter']              = 'Bộ lọc';
+$_['entry_store']               = 'Cửa hàng';
+$_['entry_image']               = 'Hình ảnh';
+$_['entry_top']                 = 'Đầu trang';
+$_['entry_column']              = 'Cột';
+$_['entry_sort_order']          = 'Thứ tự sắp xếp';
+$_['entry_status']              = 'Trạng thái';
+$_['entry_layout']              = 'Ghi đè bố cục';
 
 //entry
-$_['entry_category_custom']                     = 'Customise this category settings';
-$_['entry_category_image_display']              = 'Show main category image';
-$_['entry_category_layout']                     = 'Grid layout';
-$_['entry_category_layout_type']                = 'Layout type';
-$_['entry_category_post_page_limit']            = 'Post page limit';
-$_['entry_category_image_size']                 = 'Image size';
-$_['entry_category_sub_category_display']       = 'Display sub category';
-$_['entry_category_sub_category_col']           = 'Set columns for sub category';
-$_['entry_category_sub_category_image']         = 'Display sub category image';
-$_['entry_category_sub_category_post_count']    = 'Display sub category post count';
-$_['entry_category_sub_category_image_size']    = 'Sub category image size';
+$_['entry_category_custom']                     = 'Tùy chỉnh cài đặt danh mục này';
+$_['entry_category_image_display']              = 'Hiển thị hình anh danh mục chính';
+$_['entry_category_layout']                     = 'Bố cục lưới';
+$_['entry_category_layout_type']                = 'Kiểu bố trí';
+$_['entry_category_post_page_limit']            = 'Giới hạn trang đăng';
+$_['entry_category_image_size']                 = 'Kích thước hình ảnh';
+$_['entry_category_sub_category_display']       = 'Hiển thị danh mục phụ';
+$_['entry_category_sub_category_col']           = 'Hiển thị cột danh mục phụ';
+$_['entry_category_sub_category_image']         = 'Hiển thị hình ảnh danh mục phụ';
+$_['entry_category_sub_category_post_count']    = 'Hiển thị số lượng bài đăng danh mục phụ';
+$_['entry_category_sub_category_image_size']    = 'Kích thước hình ảnh danh mục phụ';
 
 // Help
-$_['help_filter']               = '(Autocomplete)';
-$_['help_keyword']              = 'Do not use spaces, instead replace spaces with - and make sure the keyword is globally unique.';
-$_['help_top']                  = 'Display in the top menu bar. Only works for the top parent categories.';
-$_['help_column']               = 'Number of columns to use for the bottom 3 categories. Only works for the top parent categories.';
-$_['help_layout']                               = '<h4>What is layout?</h4><p>A layout is a simple way of defining how your posts should be presented on the page. You can set 1 row with 1 column: you will see only one post under another. Dull, wouldn\'t you say?. Lest spice it up. Try setting 1 row - 1 columns, 2 row - 2 columns, 3 row - 3 columns. Make your blog standout.</p>';
+$_['help_filter']               = '(Tự động hoàn thành)';
+$_['help_keyword']              = 'Không sử dụng khoảng trắng, thay vào đó hãy thay thế khoảng trắng bằng - và đảm bảo từ khóa là duy nhất trên toàn cầu.';
+$_['help_top']                  = 'Hiển thị trong thanh menu trên cùng. Chỉ hoạt động cho các danh mục cha mẹ hàng đầu. ';
+$_['help_column']               = 'Số cột cần sử dụng cho 3 danh mục dưới cùng. Chỉ hoạt động cho các danh mục cha mẹ hàng đầu.';
+$_['help_layout']               = '<h4>Bố cục là gì?</h4><p>Bố cục là một cách đơn giản để xác định cách hiển thị bài đăng của bạn trên trang. Bạn có thể đặng một hàng một cột: bạn sẽ chỉ thấy một bài đăng trên một cột. Bạn có thể thử 1 hàng - 1 cột, 2 hàng - 2 cột, 3 hàng 3 cột. Làm cho phần tin tức trở nên nổi bật</p>';
 
 // Error
-$_['error_warning']             = 'Warning: Please check the form carefully for errors!';
-$_['error_permission']          = 'Warning: You do not have permission to modify categories!';
-$_['error_title']               = 'Category Title must be between 2 and 32 characters!';
-$_['error_meta_title']          = 'Meta Title must be greater than 3 and less than 255 characters!';
+$_['error_warning']             = 'Cảnh báo: vui lòng kiểm tra biểu mẫu cẩn thận để tìm lỗi!';
+$_['error_permission']          = 'Cảnh báo: Bạn không có quyển sửa đổi danh mục!';
+$_['error_title']               = 'Tiêu đề danh mục phải có từ 2 đến 32 ký tự!';
+$_['error_meta_title']          = 'Tiêu đề meta phải lớn hơn 3 và ít hơn 255 ký tự!';

@@ -6299,3 +6299,17 @@
 2018-12-20 10:54:40 - PHP Notice:  Undefined variable: col_count in C:\xampp\htdocs\webquangcao\catalog\controller\common\column_left.php on line 248
 2018-12-20 10:54:40 - PHP Notice:  Undefined variable: col_count in C:\xampp\htdocs\webquangcao\catalog\controller\common\column_left.php on line 248
 2018-12-20 10:54:40 - PHP Notice:  Undefined variable: col_count in C:\xampp\htdocs\webquangcao\catalog\controller\common\column_left.php on line 248
+2018-12-20 17:23:18 - PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'quang196'@'27.74.193.103' (using password: YES) in C:\xampp\htdocs\webquangcao\system\library\db\mysqli.php on line 7
+2018-12-20 17:23:18 - PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in C:\xampp\htdocs\webquangcao\system\library\db\mysqli.php on line 10
+2018-12-20 17:23:18 - PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in C:\xampp\htdocs\webquangcao\system\library\db\mysqli.php on line 10
+2018-12-20 17:23:23 - PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'quang196'@'27.74.193.103' (using password: YES) in C:\xampp\htdocs\webquangcao\system\library\db\mysqli.php on line 7
+2018-12-20 17:23:23 - PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in C:\xampp\htdocs\webquangcao\system\library\db\mysqli.php on line 10
+2018-12-20 17:23:23 - PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in C:\xampp\htdocs\webquangcao\system\library\db\mysqli.php on line 10
+2018-12-20 17:23:29 - PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'quang196'@'27.74.193.103' (using password: YES) in C:\xampp\htdocs\webquangcao\system\library\db\mysqli.php on line 7
+2018-12-20 17:23:29 - PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in C:\xampp\htdocs\webquangcao\system\library\db\mysqli.php on line 10
+2018-12-20 17:23:29 - PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in C:\xampp\htdocs\webquangcao\system\library\db\mysqli.php on line 10
+2018-12-20 17:23:31 - PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'quang196'@'27.74.193.103' (using password: YES) in C:\xampp\htdocs\webquangcao\system\library\db\mysqli.php on line 7
+2018-12-20 17:23:31 - PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in C:\xampp\htdocs\webquangcao\system\library\db\mysqli.php on line 10
+2018-12-20 17:23:31 - PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in C:\xampp\htdocs\webquangcao\system\library\db\mysqli.php on line 10
+2018-12-21 11:25:41 - PHP Warning:  mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp\htdocs\webquangcao\system\library\mail\mail.php on line 77
+2018-12-23 11:43:11 - PHP Warning:  Cannot modify header information - headers already sent in C:\xampp\htdocs\webquangcao\system\framework.php on line 108

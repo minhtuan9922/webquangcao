@@ -308,8 +308,8 @@ class ControllerExtensionDBlogModulePost extends Controller {
             $this->document->setKeywords($post_info['meta_keyword']);
             $this->document->addLink($this->url->link('extension/d_blog_module/post', 'post_id=' . $post_id, 'SSL'), 'canonical');
 
-            $data['column_left'] = $this->load->controller('common/column_left');
-            $data['column_right'] = $this->load->controller('common/column_right');
+//            $data['column_left'] = $this->load->controller('common/column_left');
+//            $data['column_right'] = $this->load->controller('common/column_right');
             $data['content_top'] = $this->load->controller('common/content_top');
             $data['content_bottom'] = $this->load->controller('common/content_bottom');
             $data['footer'] = $this->load->controller('common/footer');

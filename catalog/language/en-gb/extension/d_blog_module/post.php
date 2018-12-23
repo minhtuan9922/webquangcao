@@ -1,18 +1,18 @@
 <?php
 // Text
-$_['text_search']              = 'Search';
+$_['text_search']              = 'Tìm kiếm';
 
 
-$_['text_posted_by']           = 'Posted by';
-$_['text_anonymous']           = 'Anonymous';
-$_['text_on']                  = 'on';
-$_['text_edit']                = 'Edit';
+$_['text_posted_by']           = 'Đăng bởi';
+$_['text_anonymous']           = 'Ẩn danh';
+$_['text_on']                  = 'vào';
+$_['text_edit']                = 'Chỉnh sửa';
 
-$_['text_tags']                = 'Tags:';
-$_['text_error']               = 'Post not found!';
-$_['text_payment_recurring']   = 'Payment Profile';
-$_['text_day']                 = 'day';
-$_['text_week']                = 'week';
-$_['text_semi_month']          = 'half-month';
-$_['text_month']               = 'month';
-$_['text_year']                = 'year';
+$_['text_tags']                = 'Thẻ:';
+$_['text_error']               = 'Không tìm thấy bài đăng!';
+$_['text_payment_recurring']   = 'Hồ sơ thanh toán';
+$_['text_day']                 = 'ngày';
+$_['text_week']                = 'tuần';
+$_['text_semi_month']          = 'nửa tháng';
+$_['text_month']               = 'tháng';
+$_['text_year']                = 'năm';

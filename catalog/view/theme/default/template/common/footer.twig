@@ -1,4 +1,4 @@
-<footer>
+{# <footer>
     <div class="container">
         <div class="row"> {% if informations %}
             <div class="col-sm-3">
@@ -40,12 +40,55 @@
         <hr>
         <p>{{ powered }}</p>
     </div>
+</footer> #}
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4">
+				<img class="img-responsive" src="image/catalog/opencart-logo.png">
+				<p>Bài giới thiệu ngắn về công ty</p>
+			</div>
+			<div class="col-sm-4">
+                <div class="embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.7696059563964!2d106.37010071533285!3d10.360298069568046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310aafc2cff791f9%3A0xed5c1b7968115294!2zTmd1eeG7hW4gVsSDbiBHacOhYywgUGjGsOG7nW5nIDMsIFRow6BuaCBwaOG7kSBN4bu5IFRobywgVGnhu4FuIEdpYW5nLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1545318203524" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+			<div class="col-sm-4">
+				<h4>Thông tin liên hệ</h4>
+				<div class="contact-item">
+					<a href="tel:0987654321">
+						<img src="image/catalog/phone-icon.png">
+						<span>0987654321</span>
+					</a>
+				</div>
+				<div class="contact-item">
+					<a href="https://zalo.me/0987654321">
+						<img src="image/catalog/zalo-icon.png">
+						<span>0987654321</span>
+					</a>
+				</div>
+				<div class="contact-item">
+					<a href="mailto:quangcaothienlongtg@gmail.com">
+						<img src="image/catalog/gmail-icon.png">
+						<span>quangcaothienlongtg@gmail.com</span>
+					</a>
+				</div>
+				<div class="contact-item">
+					<a href="#">
+						<img src="image/catalog/map-icon.png">
+						<span>Địa chỉ</span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="text-center">
+			<p>Copyright © 2018 quangcaothienlongtg.com. All rights reserved. Designed by QTS</p>
+		</div>
+	</div>
 </footer>
 {% for script in scripts %} 
 <script src="{{ script }}" type="text/javascript"></script> 
 {% endfor %} 
-<!--
-OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.
-Please donate via PayPal to donate@opencart.com
-//-->
+
 </body></html>

@@ -1,41 +1,41 @@
 <?php
 // Heading
-$_['heading_title']             = 'Blog Reviews';
+$_['heading_title']             = 'Đánh giá tin tức';
 
 // Text
-$_['text_success']              = 'Success: You have modified reviews!';
-$_['text_list']                 = 'Review List';
-$_['text_add']                  = 'Add Review';
-$_['text_edit']                 = 'Edit Review';
-$_['text_default']              = 'Default';
-$_['text_blog_module']          = 'Blog module';
+$_['text_success']              = 'Thành công: Bạn đã sửa đổi đánh giá!';
+$_['text_list']                 = 'Danh sách đánh giá';
+$_['text_add']                  = 'Thêm đánh giá';
+$_['text_edit']                 = 'Chỉnh sửa đánh giá';
+$_['text_default']              = 'Mặc định';
+$_['text_blog_module']          = 'Mô-đun tin tức';
 
 // Column
-$_['column_post']               = 'Post';
-$_['column_author']             = 'Author';
-$_['column_rating']             = 'Rating';
-$_['column_status']             = 'Status';
-$_['column_date_added']         = 'Date Added';
-$_['column_action']             = 'Action';
-$_['column_image']             	= 'Image';
-$_['column_path']             	= 'Path';
+$_['column_post']               = 'Bài đăng';
+$_['column_author']             = 'Tác giả';
+$_['column_rating']             = 'Xếp hạng';
+$_['column_status']             = 'Trạng thái';
+$_['column_date_added']         = 'Ngày thêm';
+$_['column_action']             = 'Hành động';
+$_['column_image']             	= 'Hình ảnh';
+$_['column_path']             	= 'Đường dẫn';
 
 // Entry
-$_['entry_post']                = 'Post';
-$_['entry_author']              = 'Author';
-$_['entry_rating']              = 'Rating';
-$_['entry_status']              = 'Status';
-$_['entry_text']                = 'Text';
-$_['entry_date_added']          = 'Date Added';
-$_['entry_images']          	= 'Images';
+$_['entry_post']                = 'Bài đăng';
+$_['entry_author']              = 'Tác giả';
+$_['entry_rating']              = 'Xếp hạng';
+$_['entry_status']              = 'Trạng thái';
+$_['entry_text']                = 'Văn bản';
+$_['entry_date_added']          = 'Ngày thêm';
+$_['entry_images']          	= 'Hình ảnh';
 
 
 // Help
-$_['help_post']                 = '(Autocomplete)';
+$_['help_post']                 = '(Tự động hoàn thành)';
 
 // Error
-$_['error_permission']          = 'Warning: You do not have permission to modify reviews!';
-$_['error_post']                = 'Post required!';
-$_['error_author']              = 'Author must be between 3 and 64 characters!';
-$_['error_text']                = 'Review Text must be at least 1 character!';
-$_['error_rating']              = 'Review rating required!';
+$_['error_permission']          = 'Cảnh báo: Bạn không có quyền sửa đổi đánh giá!';
+$_['error_post']                = 'Yêu cầu bài đăng!';
+$_['error_author']              = 'Tác giả phải có từ 3 đến 64 ký tự!';
+$_['error_text']                = 'Xem lại văn bản phải có ít nhất 1 ký tự!';
+$_['error_rating']              = 'Yêu cầu xếp hạng đánh giá!';

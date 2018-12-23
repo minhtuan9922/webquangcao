@@ -1,9 +1,9 @@
 <?php 
 
-$_['text_blog']                      = 'Blog';
-$_['text_blog_post']                 = 'Posts';
-$_['text_blog_category']             = 'Categories';
-$_['text_blog_review']               = 'Review';
-$_['text_blog_author']               = 'Author';
-$_['text_blog_author_group']         = 'Author Group';
-$_['text_blog_settings']             = 'Settings';
+$_['text_blog'] 				= 'Tin tức';
+$_['text_blog_post'] 			= 'Bài đăng';
+$_['text_blog_category'] 		= 'Danh mục';
+$_['text_blog_review'] 			= 'Đánh giá';
+$_['text_blog_author'] 			= 'Tác giả';
+$_['text_blog_author_group'] 	= 'Nhóm tác giả';
+$_['text_blog_settings'] 		= 'Cài đặt';

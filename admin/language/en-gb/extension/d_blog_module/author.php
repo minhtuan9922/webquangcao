@@ -1,52 +1,52 @@
 <?php
 // Heading
-$_['heading_title']           = 'Blog Authors';
+$_['heading_title']           = 'Tác giả bài viết';
 
 // Text
-$_['text_success']            = 'Success: You have modified authors!';
-$_['text_list']               = 'Author List';
-$_['text_add']                = 'Add Author';
-$_['text_edit']               = 'Edit Author';
-$_['text_default']            = 'Default';
-$_['text_blog_module']        = 'Blog module';
+$_['text_success']            = 'Thành công: Bạn đã sửa đổi tác giả thành công!';
+$_['text_list']               = 'Danh sách tác giả';
+$_['text_add']                = 'Thêm tác giả';
+$_['text_edit']               = 'Chỉnh sửa tác giả';
+$_['text_default']            = 'Mặc định';
+$_['text_blog_module']        = 'Mô-dun bài viết';
 
 // Column
-$_['column_author_name']      = 'Author name';
-$_['column_action']           = 'Action';
+$_['column_author_name']      = 'Tên tác giả';
+$_['column_action']           = 'Hành động';
 
 // Entry
-$_['entry_author_name']       = 'Author name';
-$_['entry_description']       = 'Description';
-$_['entry_short_description'] = 'Short Description';
-$_['entry_meta_title']        = 'Meta Tag Title';
-$_['entry_meta_keyword']      = 'Meta Tag Keywords';
-$_['entry_meta_description']  = 'Meta Tag Description';
-$_['entry_name']              = 'Name';
-$_['entry_image']             = 'Image';
-$_['entry_username']          = 'Username';
-$_['entry_lastname']          = 'Last name';
-$_['entry_firstname']         = 'First name';
-$_['entry_confirm']           = 'Confirm password';
-$_['entry_password']          = 'Password';
-$_['entry_user_group']        = 'User Group';
-$_['entry_author_group']      = 'Author Group';
+$_['entry_author_name']       = 'Tên tác giả';
+$_['entry_description']       = 'Mô tả';
+$_['entry_short_description'] = 'Mô tả ngắn';
+$_['entry_meta_title']        = 'Tiêu đề thẻ meta';
+$_['entry_meta_keyword']      = 'Từ khóa thẻ meta';
+$_['entry_meta_description']  = 'Mô tả thẻ meta';
+$_['entry_name']              = 'Tên';
+$_['entry_image']             = 'Hình ảnh';
+$_['entry_username']          = 'Tên người dùng';
+$_['entry_lastname']          = 'Họ';
+$_['entry_firstname']         = 'Tên';
+$_['entry_confirm']           = 'Xác nhận mật khẩu';
+$_['entry_password']          = 'Mật khẩu';
+$_['entry_user_group']        = 'Nhóm người dùng';
+$_['entry_author_group']      = 'Nhóm tác giả';
 
 
 // Help
-$_['help_post']               = '(Autocomplete)';
-$_['help_user_editing']       = '<h4>Edit an existing user or create a new one?</h4><p><b>Author</b> is just a User (<a href="%s">list of users</a>), that has been granted the right to write posts. You can create an Author in two ways:</p><p><b>1. Asign author rights to an existing user</b></p><p>In the input <b>username</b> above start typing the first letter of your existing system user, which have not yet been asigned author rights. Select the user from the dropdown and continue with the form. Click save</p><p><b>2. Create a new User with Author rights</b></p><p>Just type the in the form above a new Username that you want to create and continue with the form. Click save. </p>';
+$_['help_post']               = '(Tự đọng hoàn thành)';
+$_['help_user_editing']       = '<h4>Chỉnh sửa người dùng hiện tại hoặc tạo một người dùng mới?</h4><p><b>Tác giả</b> chỉ là người dùng (<a href="%s">list of users</a>), trong danh dách người dùng đã được cấp quyền viết bài. Bạn có thể tạo tác giả theo hai cách:</p><p><b>1. Quyền tác giả cho người dùng hiện tại</b></p><p>Trong tên <b>người dùng</b> ở trên bắt đầu nhập chữ cái đầu tiên của người dùng hệ thống hiện tại của bạn. Chọn người dùng từ danh sách thả xuống và tiếp tục với biểu mẫu. Nhấn lưu</p><p><b>2. Tạo người dùng mới với quyền tác giả</b></p><p>Chỉ nhập vào biểu mẫu. Nhấn lưu.</p>';
 // Error
-$_['error_warning']             = 'Warning: Please check the form carefully for errors!';
-$_['error_permission']        = 'Warning: You do not have permission to modify authors!';
-$_['error_post']              = 'Post required!';
-$_['error_author']            = 'Author must be between 3 and 64 characters!';
-$_['error_text']              = 'Author Text must be at least 1 character!';
-$_['error_rating']            = 'Author rating required!';
-$_['error_exists']            = 'Warning: Username is already in use!';
-$_['error_username']          = 'Username must be between 3 and 20 characters!';
-$_['error_name']              = 'Name must be between 3 and 20 characters!';
-$_['error_meta_title']        = 'Meta Title must be greater than 3 and less than 255 characters!';
-$_['error_password']          = 'Password must be between 4 and 20 characters!';
-$_['error_confirm']           = 'Password and password confirmation do not match!';
-$_['error_firstname']         = 'First Name must be between 1 and 32 characters!';
-$_['error_lastname']          = 'Last Name must be between 1 and 32 characters!';
+$_['error_warning']             = 'Cảnh báo: Vui lòng kiểm tra biểu mẫu cẩn thận để tìm lỗi!';
+$_['error_permission']        = 'Cảnh báo: Bạn không có quyền sửa đổi tác giả!';
+$_['error_post']              = 'Yêu cầu bài đăng!';
+$_['error_author']            = 'Tác giả phải có từ 3 đến 64 ký tự!';
+$_['error_text']              = 'Văn bản tác giả phải có ít nhất 1 ký tự!';
+$_['error_rating']            = 'Yêu cầu xếp hạng của tác giả!';
+$_['error_exists']            = 'Cảnh báo: Tên người dùng đã được sử dụng!';
+$_['error_username']          = 'Tên người dùng phải có từ 3 đến 20 ký tự!';
+$_['error_name']              = 'Tên phải có từ 3 đến 20 ký tự!';
+$_['error_meta_title']        = 'Tiêu đề meta phải lớn hơn 3 và ít hơn 255 ký tự!';
+$_['error_password']          = 'Mật khẩu phải có từ 4 đến 20 ký tự!';
+$_['error_confirm']           = 'Mật khẩu và xác nhận mật khẩu không khớp!';
+$_['error_firstname']         = 'Tên phải có từ 1 đến 32 ký tự!';
+$_['error_lastname']          = 'Họ phải có từ 1 đến 32 ký tự!';

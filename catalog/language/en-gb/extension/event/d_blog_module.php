@@ -1,3 +1,3 @@
 <?php 
 
-$_['text_blog']                      = 'Blog';
+$_['text_blog']                      = 'Tin tức';
