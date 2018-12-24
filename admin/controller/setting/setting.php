@@ -295,6 +295,12 @@ class ControllerSettingSetting extends Controller {
 			$data['config_map'] = $this->config->get('config_map');
 		}
 
+		if (isset($this->request->post['config_video'])) {
+			$data['config_video'] = $this->request->post['config_video'];
+		} else {
+			$data['config_video'] = $this->config->get('config_video');
+		}
+
 		$this->load->model('localisation/location');
 
 		$data['locations'] = $this->model_localisation_location->getLocations();

@@ -6313,3 +6313,5 @@
 2018-12-20 17:23:31 - PHP Warning:  DB\MySQLi::__construct(): Couldn't fetch mysqli in C:\xampp\htdocs\webquangcao\system\library\db\mysqli.php on line 10
 2018-12-21 11:25:41 - PHP Warning:  mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp\htdocs\webquangcao\system\library\mail\mail.php on line 77
 2018-12-23 11:43:11 - PHP Warning:  Cannot modify header information - headers already sent in C:\xampp\htdocs\webquangcao\system\framework.php on line 108
+2018-12-24 16:23:18 - PHP Notice:  Undefined variable: query in C:\xampp\htdocs\webquangcao\catalog\model\information\contact.php on line 6
+2018-12-24 16:23:18 - PHP Notice:  Trying to get property 'row' of non-object in C:\xampp\htdocs\webquangcao\catalog\model\information\contact.php on line 6

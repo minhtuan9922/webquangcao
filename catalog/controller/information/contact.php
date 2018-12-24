@@ -4,25 +4,28 @@ class ControllerInformationContact extends Controller {
 
 	public function index() {
 		$this->load->language('information/contact');
+		$this->load->model('information/contact');
 
 		$this->document->setTitle($this->language->get('heading_title'));
 
 		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validate()) {
-			$mail = new Mail($this->config->get('config_mail_engine'));
-			$mail->parameter = $this->config->get('config_mail_parameter');
-			$mail->smtp_hostname = $this->config->get('config_mail_smtp_hostname');
-			$mail->smtp_username = $this->config->get('config_mail_smtp_username');
-			$mail->smtp_password = html_entity_decode($this->config->get('config_mail_smtp_password'), ENT_QUOTES, 'UTF-8');
-			$mail->smtp_port = $this->config->get('config_mail_smtp_port');
-			$mail->smtp_timeout = $this->config->get('config_mail_smtp_timeout');
-
-			$mail->setTo($this->config->get('config_email'));
-			$mail->setFrom($this->config->get('config_email'));
-			$mail->setReplyTo($this->request->post['email']);
-			$mail->setSender(html_entity_decode($this->request->post['name'], ENT_QUOTES, 'UTF-8'));
-			$mail->setSubject(html_entity_decode(sprintf($this->language->get('email_subject'), $this->request->post['name']), ENT_QUOTES, 'UTF-8'));
-			$mail->setText($this->request->post['enquiry']);
-			$mail->send();
+//			$mail = new Mail($this->config->get('config_mail_engine'));
+//			$mail->parameter = $this->config->get('config_mail_parameter');
+//			$mail->smtp_hostname = $this->config->get('config_mail_smtp_hostname');
+//			$mail->smtp_username = $this->config->get('config_mail_smtp_username');
+//			$mail->smtp_password = html_entity_decode($this->config->get('config_mail_smtp_password'), ENT_QUOTES, 'UTF-8');
+//			$mail->smtp_port = $this->config->get('config_mail_smtp_port');
+//			$mail->smtp_timeout = $this->config->get('config_mail_smtp_timeout');
+//
+//			$mail->setTo($this->config->get('config_email'));
+//			$mail->setFrom($this->config->get('config_email'));
+//			$mail->setReplyTo($this->request->post['email']);
+//			$mail->setSender(html_entity_decode($this->request->post['name'], ENT_QUOTES, 'UTF-8'));
+//			$mail->setSubject(html_entity_decode(sprintf($this->language->get('email_subject'), $this->request->post['name']), ENT_QUOTES, 'UTF-8'));
+//			$mail->setText($this->request->post['enquiry']);
+//			$mail->send();
+			
+			$this->model_information_contact->add_contact($this->request->post);
 
 			$this->response->redirect($this->url->link('information/contact/success'));
 		}
@@ -185,10 +188,10 @@ class ControllerInformationContact extends Controller {
 
 		$data['continue'] = $this->url->link('common/home');
 
-		$data['column_left'] = $this->load->controller('common/column_left');
-		$data['column_right'] = $this->load->controller('common/column_right');
-		$data['content_top'] = $this->load->controller('common/content_top');
-		$data['content_bottom'] = $this->load->controller('common/content_bottom');
+//		$data['column_left'] = $this->load->controller('common/column_left');
+//		$data['column_right'] = $this->load->controller('common/column_right');
+//		$data['content_top'] = $this->load->controller('common/content_top');
+//		$data['content_bottom'] = $this->load->controller('common/content_bottom');
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
 

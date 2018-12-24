@@ -45,12 +45,16 @@
 </head>
 <body>
 <nav id="top">
-    <div class="container">{{ currency }}
+    <div class="container">
+ 		<div class="address-top">
+			<marquee scrollamount="5">{{ address }}</marquee>
+		</div>
+		{{ currency }}
         {{ language }}
         <div id="top-links" class="nav pull-right">
             <ul class="list-inline">
-                <li><a href="tel:{{ telephone }}"><i class="fa fa-phone"></i> <span class="hidden-xs hidden-sm hidden-md">{{ telephone }}</span></a></li>
-                <li><a href="mailto:{{ email }}"><i class="fa fa-envelope"></i> <span class="hidden-xs hidden-sm hidden-md">{{ email }}</span></a></li>
+                <li><a href="tel:{{ telephone }}"><img src="image/catalog/icon-phone-header.png"> <span class="hidden-xs hidden-sm hidden-md">{{ telephone }}</span></a></li>
+                <li><a href="mailto:{{ email }}"><img src="image/catalog/icon-mail-header.png"> <span class="hidden-xs hidden-sm hidden-md">{{ email }}</span></a></li>
                 {# <li class="dropdown"><a href="{{ account }}" title="{{ text_account }}" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <span class="hidden-xs hidden-sm hidden-md">{{ text_account }}</span> <span class="caret"></span></a>
                     <ul class="dropdown-menu dropdown-menu-right">
                         {% if logged %}

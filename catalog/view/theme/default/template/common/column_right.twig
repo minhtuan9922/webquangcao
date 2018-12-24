@@ -1,5 +1,5 @@
 {% if modules %}
-<aside id="column-right" class="col-sm-3 hidden-xs"> 
+<aside id="column-right" class="col-sm-3"> 
 	{% for module in modules %}
     {{ module }}
     {% endfor %} 
@@ -52,6 +52,11 @@
 				</div>
 			{% endif %}
 		</div>
+	</div>
+	<div class="bg-left news p-15">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="{{ video }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
 	</div>
 </aside>
 {% endif %} 
