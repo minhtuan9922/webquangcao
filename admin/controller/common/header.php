@@ -76,6 +76,9 @@ class ControllerCommonHeader extends Controller {
 				);
 			}
 		}
+		
+		$this->load->model('contact/contact');
+		$data['total_contact'] = $this->model_contact_contact->countStatusContact(0);
 
 		return $this->load->view('common/header', $data);
 	}

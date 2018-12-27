@@ -6315,3 +6315,5 @@
 2018-12-23 11:43:11 - PHP Warning:  Cannot modify header information - headers already sent in C:\xampp\htdocs\webquangcao\system\framework.php on line 108
 2018-12-24 16:23:18 - PHP Notice:  Undefined variable: query in C:\xampp\htdocs\webquangcao\catalog\model\information\contact.php on line 6
 2018-12-24 16:23:18 - PHP Notice:  Trying to get property 'row' of non-object in C:\xampp\htdocs\webquangcao\catalog\model\information\contact.php on line 6
+2018-12-27 13:17:02 - PHP Notice:  Undefined variable: query in C:\xampp\htdocs\webquangcao\catalog\model\information\contact.php on line 6
+2018-12-27 13:17:02 - PHP Notice:  Trying to get property 'row' of non-object in C:\xampp\htdocs\webquangcao\catalog\model\information\contact.php on line 6

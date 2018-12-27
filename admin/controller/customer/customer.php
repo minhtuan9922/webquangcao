@@ -1220,6 +1220,7 @@ class ControllerCustomerCustomer extends Controller {
 		if (!$this->user->hasPermission('modify', 'customer/customer')) {
 			$json['error'] = $this->language->get('error_permission');
 		} else {
+
 			$this->load->model('customer/customer');
 
 			$this->model_customer_customer->addHistory($this->request->get['customer_id'], $this->request->post['comment']);

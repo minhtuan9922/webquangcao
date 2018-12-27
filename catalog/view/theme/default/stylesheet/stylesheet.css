@@ -136,6 +136,7 @@ div.required .control-label:before {
 }
 #top-links span {
 	font-size: 18px;
+	color: #000000;
 }
 .address-top {
 	width: 50%;
@@ -144,6 +145,7 @@ div.required .control-label:before {
 }
 .address-top marquee {
 	line-height: 28px;
+	color: #000000;
 }
 /* logo */
 #logo {
