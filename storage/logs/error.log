@@ -6317,3 +6317,8 @@
 2018-12-24 16:23:18 - PHP Notice:  Trying to get property 'row' of non-object in C:\xampp\htdocs\webquangcao\catalog\model\information\contact.php on line 6
 2018-12-27 13:17:02 - PHP Notice:  Undefined variable: query in C:\xampp\htdocs\webquangcao\catalog\model\information\contact.php on line 6
 2018-12-27 13:17:02 - PHP Notice:  Trying to get property 'row' of non-object in C:\xampp\htdocs\webquangcao\catalog\model\information\contact.php on line 6
+2018-12-28 16:59:25 - PHP Warning:  Illegal string offset 'module_id' in C:\xampp\htdocs\webquangcao\admin\controller\catalog\product.php on line 81
+2018-12-28 16:59:25 - PHP Warning:  Illegal string offset 'module_id' in C:\xampp\htdocs\webquangcao\admin\controller\catalog\product.php on line 81
+2018-12-28 16:59:25 - PHP Warning:  Illegal string offset 'module_id' in C:\xampp\htdocs\webquangcao\admin\controller\catalog\product.php on line 81
+2018-12-28 16:59:25 - PHP Notice:  Undefined variable: setting in C:\xampp\htdocs\webquangcao\admin\controller\catalog\product.php on line 88
+2018-12-28 18:18:53 - PHP Notice:  Undefined index: module in C:\xampp\htdocs\webquangcao\admin\controller\catalog\product.php on line 108

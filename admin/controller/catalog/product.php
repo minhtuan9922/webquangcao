@@ -20,7 +20,39 @@ class ControllerCatalogProduct extends Controller {
 		$this->load->model('catalog/product');
 
 		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
-			$this->model_catalog_product->addProduct($this->request->post);
+			$product_id = $this->model_catalog_product->addProduct($this->request->post);
+			
+			$module = $this->request->post['module'];
+			if(!empty($module))
+			{
+				foreach($module as $item)
+				{
+					$module_info = $this->model_catalog_product->get_module($item);
+					if(!empty($module_info))
+					{
+						$setting = json_decode($module_info['setting'], true);
+						if(in_array($product_id, $setting['product']) == false)
+						{
+							print_r($setting['product']); echo '<br>';
+							$product_tmp = $setting['product'];
+							if(!empty($product_tmp))
+							{
+								$setting['product'][0] = $product_id;
+								foreach($product_tmp as $key => $tmp)
+								{
+									$setting['product'][$key + 1] = $tmp;
+								}
+							}
+							else
+							{
+								$setting['product'][] = $product_id;
+							}
+							$setting = json_encode($setting);
+							$this->model_catalog_product->update_setting_module($item, $setting);
+						}
+					}
+				}
+			}
 
 			$this->session->data['success'] = $this->language->get('text_success');
 
@@ -73,7 +105,37 @@ class ControllerCatalogProduct extends Controller {
 
 		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
 			$this->model_catalog_product->editProduct($this->request->get['product_id'], $this->request->post);
-
+			$module = $this->request->post['module'];
+			if(!empty($module))
+			{
+				foreach($module as $item)
+				{
+					$module_info = $this->model_catalog_product->get_module($item);
+					if(!empty($module_info))
+					{
+						$setting = json_decode($module_info['setting'], true);
+						if(in_array($this->request->get['product_id'], $setting['product']) == false)
+						{
+							print_r($setting['product']); echo '<br>';
+							$product_tmp = $setting['product'];
+							if(!empty($product_tmp))
+							{
+								$setting['product'][0] = $this->request->get['product_id'];
+								foreach($product_tmp as $key => $tmp)
+								{
+									$setting['product'][$key + 1] = $tmp;
+								}
+							}
+							else
+							{
+								$setting['product'][] = $this->request->get['product_id'];
+							}
+							$setting = json_encode($setting);
+							$this->model_catalog_product->update_setting_module($item, $setting);
+						}
+					}
+				}
+			}
 			$this->session->data['success'] = $this->language->get('text_success');
 
 			$url = '';
@@ -568,8 +630,10 @@ class ControllerCatalogProduct extends Controller {
 		);
 
 		if (!isset($this->request->get['product_id'])) {
+			$data['product_id'] = '';
 			$data['action'] = $this->url->link('catalog/product/add', 'user_token=' . $this->session->data['user_token'] . $url, true);
 		} else {
+			$data['product_id'] = $this->request->get['product_id'];
 			$data['action'] = $this->url->link('catalog/product/edit', 'user_token=' . $this->session->data['user_token'] . '&product_id=' . $this->request->get['product_id'] . $url, true);
 		}
 
@@ -1158,6 +1222,23 @@ class ControllerCatalogProduct extends Controller {
 			$data['product_layout'] = $this->model_catalog_product->getProductLayouts($this->request->get['product_id']);
 		} else {
 			$data['product_layout'] = array();
+		}
+		
+		$module_product = $this->model_catalog_product->get_modules('featured');
+		$data['module'] = array();
+		if(!empty($module_product))
+		{
+			foreach($module_product as $item)
+			{
+				$setting = json_decode($item['setting'], true);
+				$data['module'][] = array(
+					'module_id' 	=> $item['module_id'],
+					'name' 			=> $item['name'],
+					'code' 			=> $item['code'],
+					'setting' 		=> $setting,
+					'product' 		=> $setting['product'],
+				);
+			}
 		}
 
 		$this->load->model('design/layout');

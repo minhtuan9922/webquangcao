@@ -720,4 +720,18 @@ class ModelCatalogProduct extends Model {
 
 		return $query->row['total'];
 	}
+	public function get_modules($code) 
+	{
+		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "module WHERE code = '" . $code . "'");
+		return $query->rows;
+	}
+	public function get_module($module_id) 
+	{
+		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "module WHERE module_id = '" . $module_id . "'");
+		return $query->row;
+	}
+	public function update_setting_module($module_id, $setting) 
+	{
+		$query = $this->db->query("update " . DB_PREFIX . "module set setting = '".$setting."' WHERE module_id = '" . $module_id . "'");
+	}
 }

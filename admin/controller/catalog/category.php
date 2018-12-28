@@ -339,8 +339,10 @@ class ControllerCatalogCategory extends Controller {
 		);
 
 		if (!isset($this->request->get['category_id'])) {
+			$data['category_id'] = '';
 			$data['action'] = $this->url->link('catalog/category/add', 'user_token=' . $this->session->data['user_token'] . $url, true);
 		} else {
+			$data['category_id'] = $this->request->get['category_id'];
 			$data['action'] = $this->url->link('catalog/category/edit', 'user_token=' . $this->session->data['user_token'] . '&category_id=' . $this->request->get['category_id'] . $url, true);
 		}
 
@@ -496,7 +498,7 @@ class ControllerCatalogCategory extends Controller {
 		} else {
 			$data['category_layout'] = array();
 		}
-
+		
 		$this->load->model('design/layout');
 
 		$data['layouts'] = $this->model_design_layout->getLayouts();
