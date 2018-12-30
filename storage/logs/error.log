@@ -6322,3 +6322,19 @@
 2018-12-28 16:59:25 - PHP Warning:  Illegal string offset 'module_id' in C:\xampp\htdocs\webquangcao\admin\controller\catalog\product.php on line 81
 2018-12-28 16:59:25 - PHP Notice:  Undefined variable: setting in C:\xampp\htdocs\webquangcao\admin\controller\catalog\product.php on line 88
 2018-12-28 18:18:53 - PHP Notice:  Undefined index: module in C:\xampp\htdocs\webquangcao\admin\controller\catalog\product.php on line 108
+2018-12-30 6:09:11 - PHP Notice:  Undefined index: module in C:\xampp\htdocs\webquangcao\admin\controller\catalog\product.php on line 108
+2018-12-30 6:12:24 - PHP Notice:  Undefined index: module in C:\xampp\htdocs\webquangcao\admin\controller\catalog\product.php on line 108
+2018-12-30 6:19:27 - PHP Notice:  Undefined index: module in C:\xampp\htdocs\webquangcao\admin\controller\catalog\product.php on line 108
+2018-12-30 6:24:40 - PHP Notice:  Undefined index: module in C:\xampp\htdocs\webquangcao\admin\controller\catalog\product.php on line 108
+2018-12-30 6:54:02 - PHP Notice:  Array to string conversion in C:\xampp\htdocs\webquangcao\admin\model\catalog\product.php on line 730
+2018-12-30 6:54:02 - PHP Notice:  Array to string conversion in C:\xampp\htdocs\webquangcao\admin\model\catalog\product.php on line 730
+2018-12-30 6:54:02 - PHP Notice:  Array to string conversion in C:\xampp\htdocs\webquangcao\admin\model\catalog\product.php on line 730
+2018-12-30 6:54:02 - PHP Notice:  Array to string conversion in C:\xampp\htdocs\webquangcao\admin\model\catalog\product.php on line 730
+2018-12-30 6:54:14 - PHP Notice:  Array to string conversion in C:\xampp\htdocs\webquangcao\admin\model\catalog\product.php on line 730
+2018-12-30 6:54:14 - PHP Notice:  Array to string conversion in C:\xampp\htdocs\webquangcao\admin\model\catalog\product.php on line 730
+2018-12-30 6:55:35 - PHP Notice:  Array to string conversion in C:\xampp\htdocs\webquangcao\admin\model\catalog\product.php on line 730
+2018-12-30 6:55:35 - PHP Notice:  Array to string conversion in C:\xampp\htdocs\webquangcao\admin\model\catalog\product.php on line 730
+2018-12-30 6:56:58 - PHP Warning:  array_diff(): Argument #2 is not an array in C:\xampp\htdocs\webquangcao\admin\controller\catalog\product.php on line 158
+2018-12-30 6:58:05 - PHP Warning:  in_array() expects parameter 2 to be array, null given in C:\xampp\htdocs\webquangcao\admin\controller\catalog\product.php on line 156
+2018-12-30 7:04:52 - PHP Warning:  in_array() expects parameter 2 to be array, null given in C:\xampp\htdocs\webquangcao\admin\controller\catalog\product.php on line 156
+2018-12-30 7:08:32 - PHP Warning:  in_array() expects parameter 2 to be array, null given in C:\xampp\htdocs\webquangcao\admin\controller\catalog\product.php on line 125

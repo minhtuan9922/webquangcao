@@ -47,7 +47,7 @@ class ControllerCatalogProduct extends Controller {
 							{
 								$setting['product'][] = $product_id;
 							}
-							$setting = json_encode($setting);
+							$setting = json_encode($setting, JSON_UNESCAPED_UNICODE);
 							$this->model_catalog_product->update_setting_module($item, $setting);
 						}
 					}
@@ -105,7 +105,15 @@ class ControllerCatalogProduct extends Controller {
 
 		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
 			$this->model_catalog_product->editProduct($this->request->get['product_id'], $this->request->post);
-			$module = $this->request->post['module'];
+			if(isset($this->request->post['module']))
+			{
+				$module = $this->request->post['module'];
+			}
+			else
+			{
+				$module = array();
+			}
+			$module_product = $this->model_catalog_product->get_modules('featured');
 			if(!empty($module))
 			{
 				foreach($module as $item)
@@ -116,7 +124,6 @@ class ControllerCatalogProduct extends Controller {
 						$setting = json_decode($module_info['setting'], true);
 						if(in_array($this->request->get['product_id'], $setting['product']) == false)
 						{
-							print_r($setting['product']); echo '<br>';
 							$product_tmp = $setting['product'];
 							if(!empty($product_tmp))
 							{
@@ -130,12 +137,46 @@ class ControllerCatalogProduct extends Controller {
 							{
 								$setting['product'][] = $this->request->get['product_id'];
 							}
-							$setting = json_encode($setting);
+							$setting = json_encode($setting, JSON_UNESCAPED_UNICODE);
 							$this->model_catalog_product->update_setting_module($item, $setting);
 						}
 					}
 				}
 			}
+			if(!empty($module_product))
+			{
+				foreach($module_product as $item)
+				{
+					if(in_array($item['module_id'], $module) == false)
+					{
+						$module_info = $this->model_catalog_product->get_module($item['module_id']);
+						if(!empty($module_info))
+						{
+							$setting = json_decode($module_info['setting'], true);
+							if(!empty($setting['product']) && in_array($this->request->get['product_id'], $setting['product']) == true)
+							{
+								$product_tmp = $setting['product'];
+								$setting['product'] = array();
+								if(!empty($product_tmp))
+								{
+									$setting['product'] = array();
+									foreach($product_tmp as $key => $tmp)
+									{
+										if($tmp != $this->request->get['product_id'])
+										{
+											$setting['product'][] = $tmp;
+										}
+									}
+								}
+								
+								$setting = json_encode($setting, JSON_UNESCAPED_UNICODE);
+								$this->model_catalog_product->update_setting_module($item['module_id'], $setting);
+							}
+						}
+					}
+				}
+			}
+			//print_r($setting); die();
 			$this->session->data['success'] = $this->language->get('text_success');
 
 			$url = '';
@@ -1236,7 +1277,7 @@ class ControllerCatalogProduct extends Controller {
 					'name' 			=> $item['name'],
 					'code' 			=> $item['code'],
 					'setting' 		=> $setting,
-					'product' 		=> $setting['product'],
+					'product' 		=> isset($setting['product']) ? $setting['product'] : array() 
 				);
 			}
 		}
