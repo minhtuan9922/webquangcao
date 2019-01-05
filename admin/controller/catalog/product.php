@@ -469,6 +469,8 @@ class ControllerCatalogProduct extends Controller {
 				'price'      => $this->currency->format($result['price'], $this->config->get('config_currency')),
 				'special'    => $special,
 				'quantity'   => $result['quantity'],
+				'date_added' => $result['date_added'],
+				'date_modified' => $result['date_modified'],
 				'status'     => $result['status'] ? $this->language->get('text_enabled') : $this->language->get('text_disabled'),
 				'edit'       => $this->url->link('catalog/product/edit', 'user_token=' . $this->session->data['user_token'] . '&product_id=' . $result['product_id'] . $url, true)
 			);
@@ -534,6 +536,8 @@ class ControllerCatalogProduct extends Controller {
 		$data['sort_quantity'] = $this->url->link('catalog/product', 'user_token=' . $this->session->data['user_token'] . '&sort=p.quantity' . $url, true);
 		$data['sort_status'] = $this->url->link('catalog/product', 'user_token=' . $this->session->data['user_token'] . '&sort=p.status' . $url, true);
 		$data['sort_order'] = $this->url->link('catalog/product', 'user_token=' . $this->session->data['user_token'] . '&sort=p.sort_order' . $url, true);
+		$data['sort_date_added'] = $this->url->link('catalog/product', 'user_token=' . $this->session->data['user_token'] . '&sort=p.date_added' . $url, true);
+		$data['sort_date_modified'] = $this->url->link('catalog/product', 'user_token=' . $this->session->data['user_token'] . '&sort=p.date_modified' . $url, true);
 
 		$url = '';
 

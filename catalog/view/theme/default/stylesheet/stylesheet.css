@@ -569,6 +569,7 @@ footer h5 {
 	border: 1px solid #ddd;
 	margin-bottom: 20px;
 	overflow: auto;
+	position: relative;
 }
 .product-thumb .image {
 	text-align: center;
@@ -636,9 +637,21 @@ footer h5 {
 	font-weight: bold;
 }
 .product-thumb .caption {
-	padding: 10px 20px;
-	min-height: 88px;
-	background-color: #d8d8d8;
+	padding: 5px 15px;
+	min-height: 46px;
+	background-color: rgba(0,0,0,0.44);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+}
+.product-thumb .caption h4 a{
+	color: #FFFFFF;
+	display: block;
+}
+.product-thumb .caption:hover h4 a{
+	color: #ffd600;
 }
 .product-list .product-thumb .caption {
 	margin-left: 230px;
