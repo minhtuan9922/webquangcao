@@ -6338,3 +6338,7 @@
 2018-12-30 6:58:05 - PHP Warning:  in_array() expects parameter 2 to be array, null given in C:\xampp\htdocs\webquangcao\admin\controller\catalog\product.php on line 156
 2018-12-30 7:04:52 - PHP Warning:  in_array() expects parameter 2 to be array, null given in C:\xampp\htdocs\webquangcao\admin\controller\catalog\product.php on line 156
 2018-12-30 7:08:32 - PHP Warning:  in_array() expects parameter 2 to be array, null given in C:\xampp\htdocs\webquangcao\admin\controller\catalog\product.php on line 125
+2019-01-06 7:18:55 - PHP Notice:  A non well formed numeric value encountered in C:\xampp\htdocs\webquangcao\system\library\image.php on line 148
+2019-01-06 7:18:55 - PHP Notice:  A non well formed numeric value encountered in C:\xampp\htdocs\webquangcao\system\library\image.php on line 165
+2019-01-06 7:18:55 - PHP Notice:  A non well formed numeric value encountered in C:\xampp\htdocs\webquangcao\system\library\image.php on line 169
+2019-01-06 7:18:55 - PHP Notice:  A non well formed numeric value encountered in C:\xampp\htdocs\webquangcao\system\library\image.php on line 180

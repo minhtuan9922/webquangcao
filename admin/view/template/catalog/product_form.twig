@@ -28,7 +28,7 @@
                     <ul class="nav nav-tabs">
                         <li class="active"><a href="#tab-image" data-toggle="tab">{{ tab_image }}</a></li>
                         <li><a href="#tab-general" data-toggle="tab">{{ tab_general }}</a></li>
-                        <li><a href="#tab-data" data-toggle="tab">{{ tab_data }}</a></li>
+                        <li class="display-none"><a href="#tab-data" data-toggle="tab">{{ tab_data }}</a></li>
                         <li><a href="#tab-links" data-toggle="tab">{{ tab_links }}</a></li>
                         <li class="display-none"><a href="#tab-attribute" data-toggle="tab">{{ tab_attribute }}</a></li>
                         <li class="display-none"><a href="#tab-option" data-toggle="tab">{{ tab_option }}</a></li>
@@ -99,7 +99,8 @@
                                     <input type="text" name="model" value="{{ model }}" placeholder="{{ entry_model }}" id="input-model" class="form-control" />
                                     {% if error_model %}
                                     <div class="text-danger">{{ error_model }}</div>
-                                    {% endif %}</div>
+                                    {% endif %}
+								</div>
                             </div>
                             <div class="form-group display-none">
                                 <label class="col-sm-2 control-label" for="input-sku"><span data-toggle="tooltip" title="{{ help_sku }}">{{ entry_sku }}</span></label>

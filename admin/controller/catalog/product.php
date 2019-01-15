@@ -707,7 +707,7 @@ class ControllerCatalogProduct extends Controller {
 		} elseif (!empty($product_info)) {
 			$data['model'] = $product_info['model'];
 		} else {
-			$data['model'] = '';
+			$data['model'] = 'product '.$this->model_catalog_product->getTotalAllProducts();
 		}
 
 		if (isset($this->request->post['sku'])) {

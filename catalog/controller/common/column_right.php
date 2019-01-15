@@ -108,8 +108,12 @@ class ControllerCommonColumnRight extends Controller {
         $page = 1;
         $limit = 6;
 
-        
-        $category_id = 8;
+        if (!empty($this->request->get['category_id'])) {
+            $category_id = $this->request->get['category_id'];
+        }
+        else {
+            $category_id = $this->setting['category']['main_category_id'];
+        }
 
         $url = '';
         

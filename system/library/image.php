@@ -153,7 +153,7 @@ class Image {
 		} elseif ($default == 'h') {
 			$scale = $scale_h;
 		} else {
-			$scale = min($scale_w, $scale_h);
+			$scale = max($scale_w, $scale_h);
 		}
 
 		if ($scale == 1 && $scale_h == $scale_w && $this->mime != 'image/png') {

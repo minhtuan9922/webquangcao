@@ -662,6 +662,15 @@ class ModelCatalogProduct extends Model {
 
 		return $query->row['total'];
 	}
+	public function getTotalAllProducts() {
+		$sql = "SELECT COUNT(DISTINCT p.product_id) AS total FROM " . DB_PREFIX . "product p LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id)";
+
+		$sql .= " WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "'";
+
+		$query = $this->db->query($sql);
+
+		return $query->row['total'];
+	}
 
 	public function getTotalProductsByTaxClassId($tax_class_id) {
 		$query = $this->db->query("SELECT COUNT(*) AS total FROM " . DB_PREFIX . "product WHERE tax_class_id = '" . (int)$tax_class_id . "'");
